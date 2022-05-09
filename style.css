@@ -1,0 +1,134 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.mapView{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+.map{
+    width: 100%;
+    height: 100vh;
+}
+.side-Panel{
+    width: 360px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.search-Region{
+    height: 80px;
+    width: 320px;
+    background-color: ghostwhite;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.search-Box{
+    height: 25px;
+    width: 180px;
+    margin-right: 2px;
+    margin-top: 1px;
+}
+.search-bar{
+    width: 310px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 2px;
+}
+
+.search-Type{
+    height: 30px;
+    width: 100px;
+}
+
+.search-Button{
+    height: 30px;
+    width: 30px;
+    margin-left: 2px;
+
+}
+.quick-button{
+    height: 30px;
+    margin: 1px;
+    padding: 2px;
+    background-color: white;
+    font-size: smaller;
+}
+a.quick-Button:hover{
+    background: #3d7a80;
+    background: -webkit-linear-gradient(top, #3d7a80, #2f5f63);
+    background: -moz-linear-gradient(top, #3d7a80, #2f5f63);
+    background: -o-linear-gradient(top, #3d7a80, #2f5f63);
+    background: -ms-linear-gradient(top, #3d7a80, #2f5f63);
+    background: linear-gradient(top, #3d7a80, #2f5f63);
+
+}
+.results-Region{
+    background-color: ghostwhite;
+    width: 320px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.result{
+    background-color: antiquewhite;
+    height: 225px;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
+.result-Hero{
+    display: flex;
+    flex-direction: column;
+    height: 225px;
+    width: 150px;
+}
+.result-Title{
+    width: 150px;
+    height: 40px;
+    padding: 10px;
+}
+.result-Address{
+    width: 150px;
+    height: 55px;
+    padding: 10px;
+}
+.result-Image{
+    height: 100px;
+    width: 100px;
+    margin-left: 25px;
+    
+}
+.result-Options{
+    height: 225px;
+    width: 150px;
+}
+.result-Btn{
+    height: 75px;
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    
+}
+.button-Label{
+    height: 75px;
+    width: 75px;
+    text-align: center;
+    justify-content: center;
+}
+.button-Icon{
+    width: 55px;
+    height: 55px;
+    margin: 10px;
+}

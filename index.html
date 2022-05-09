@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>loadmapasyncHTML</title>
+        <link rel="stylesheet" href="style.css">
+        <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+        <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?key=AoVQbviR4QriUaesKy9WKjQb0EBSpN4MOa1Dr2SvkGe3JRS18-WJoKzpOEo_RL7S'></script>
+        <script src="app.js"></script>
+    </head>
+
+    <body class="mapView">
+        <section class="side-Panel">
+            <section class="search-Region">
+                <div class="search-bar">
+                    <input type="text" id="search-Input" name="search-Input" class="search-Box">
+                    <select id="type-Input" name="type-Input" class="search-Type">
+                        <option value="interests">Interests</option>
+                        <option value="geocode">Address</option>
+                        <option value="saved">Saved</option>
+                        <option value="area">Area</option>
+                    </select>
+                    <button id="search-Btn" class="search-Button" onclick="callSearch()"></button>
+                    
+                </div>
+                    
+                <div class="search-bar">
+                    <button class="quick-button" onclick="requestPOIUrl('eatDrink')">Food</button>
+                    <button class="quick-button" onclick="requestPOIUrl('seeDo')">Attractions</button>
+                    <button class="quick-button" onclick="requestPOIUrl('shop')">Shopping</button>
+                    <button class="quick-button" onclick="requestPOIUrl('BanksAndCreditUniions')">Banks</button>
+                    <button class="quick-button" onclick="requestPOIUrl('Hospitals')">Hospitals</button>
+                    <button class="quick-button" onclick="requestPOIUrl('HotelsAndMotels')">Hotel</button>
+                </div>
+            </section>
+            
+            <section class="results-Region">
+            </section>
+        </section>
+        <div id="myMap" class="map">
+            <body onload="loadMapScenario()" ></body>
+        </div>
+    </body>
+</html>
