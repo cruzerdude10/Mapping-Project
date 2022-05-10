@@ -105,8 +105,14 @@ function loadMapScenario() {
         var longitude = userLocation.longitude.toString().substr(0,8);
         const ajax = new XMLHttpRequest;
 
-        //check if user wants to check via area
-        const requestUrl = `https://dev.virtualearth.net/REST/v1/LocalSearch/?query=${term}&userLocation=${latitude},${longitude}&key=${bingMapKey}`;
+
+        const coreURL = "https://dev.virtualearth.net/";
+        const restAPI = "REST/v1/";
+        const apiFunction = "LocalSearch/";
+        const query = `?query=${term}`;
+        const userLocation = `&userLocation=${latitude},${longitude}`;
+        const key = `&key=${bingMapKey}`;
+        const requestUrl = coreURL + restAPI + query + userLocation + key;
         
         const requestMethod = 'GET';
         const asyncRquest = true;
@@ -130,6 +136,8 @@ function loadMapScenario() {
             console.warn();
         }//end if
     }
+
+    //Migrate this to requestPOIUrl add additional arg make bounding box coords a function
     function requestPOIBBox(term){
         iprimitives = DrawingManager.getPrimitives()
         var bBox = getBoundingBox(iprimitives[0]);
@@ -139,9 +147,16 @@ function loadMapScenario() {
         var bbWest = trimCoord(bBox.bounds[3]);
         const ajax = new XMLHttpRequest;
 
-        //check if user wants to check via area
-        const requestUrl = `https://dev.virtualearth.net/REST/v1/LocalSearch/?query=${term}&userMapView=${bbNorth},${bbEast},${bbSouth},${bbWest}&key=${bingMapKey}`;
+        const coreURL = "https://dev.virtualearth.net/";
+        const restAPI = "REST/v1/";
+        const apiFunction = "LocalSearch/";
+        const query = `?query=${term}`;
+        const userMapView = `&userMapView=${bbNorth},${bbEast},${bbSouth},${bbWest}`;
+        const key = `&key=${bingMapKey}`;
         
+        const requestUrl = coreURL + restAPI + query + userMapView + key;
+
+
         const requestMethod = 'GET';
         const asyncRquest = true;
         ajax.open(requestMethod, requestUrl, asyncRquest);
